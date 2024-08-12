@@ -4,6 +4,10 @@
     --branco: #fff;
 }
 
+a {
+    color: rgb(177, 20, 156);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -135,6 +139,10 @@ nav {
     margin-bottom: 20px;
 }
 
+.comp-section p{
+    margin: 15px;
+}
+
 .intro-section p, .intro-section h1{
     text-align: center;
 }
@@ -162,7 +170,6 @@ nav {
 
 
 .contact-section a {
-    color: #e91e63;
     text-decoration: none;
 }
 
@@ -246,5 +253,6 @@ nav {
         margin-bottom: 5px;
         margin-top: 5px;
     }
+
     
 }
