@@ -1,4 +1,9 @@
-/* Reset básico para garantir que os estilos sejam consistentes */
+:root {
+    --preto: #333;
+    --rosa: #db929e;
+    --branco: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,214 +11,231 @@
     text-align: justify;
 }
 
-/* Definições gerais para o corpo da página */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #eee3e3;
+    background-color: #fde8eb;
+    color: var(--preto);
 }
 
-:root {
-    --rosa: #db929e;
+h1, h2, h3, p {
+    margin-bottom: 20px;
 }
 
-/* Estilização do cabeçalho e navegação */
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.0rem;
+}
+
 header {
-    position: relative; /* Necessário para posicionar o ::before */
-    background: url('balloons.webp') no-repeat center center/cover; /* Imagem de fundo */
-    color: #fff; /* Cor do texto */
-    padding: 30px;
-    height: 80px; /* Ajuste a altura conforme necessário */
+    position: relative;
+    background: url('balloons.webp') no-repeat center center/cover;
+    color: var(--branco);
+    padding: 50px;
+    height: 80px;
     background-size: cover;
-    background-position: center 70%; /* Centraliza a imagem horizontal e verticalmente */
-    
+    background-position: center 70%;
 }
 
-/* Sobreposição */
 header::before {
-    content: ""; /* Necessário para o pseudo-elemento */
-    position: absolute; /* Posiciona o ::before sobre o header */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(46, 38, 38, 0.685); /* Cor de sobreposição preta com 50% de opacidade */
-    z-index: 1; /* Fica abaixo do conteúdo do header */
-    pointer-events: none; /* Garante que a sobreposição não interfira com cliques */
+    background: rgba(46, 38, 38, 0.685);
+    z-index: 1;
+    pointer-events: none;
 }
 
 nav {
     position: relative;
-    z-index: 1; /* Acima da imagem */
+    z-index: 1;
 }
 
-.container{
-    max-width: 800px;
+.container {
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza o container horizontalmente */
+    margin: 0 auto;
     padding: 20px;
-    display: flex; /* Ativa flexbox */
-    flex-direction: column; /* Coloca os itens em coluna */
-    align-items: center; /* Centraliza itens horizontalmente */
-    text-align: center; /* Centraliza o texto dentro dos itens */
-    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--branco);
 }
 
-/* Estilização da seção de introdução */
-.intro-section { 
-    color: #363232;
+.intro-section {
+    color: var(--preto);
     text-align: center;
     padding: 20px;
 }
 
-.intro-section h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.intro-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Espaçamento entre os botões */
-    justify-content: center; /* Centraliza os botões */
-    padding: 10px; /* Adiciona algum padding ao redor dos botões */
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: var(--rosa); /* Rosa claro para o botão */
-    color: #fff;
+    background-color: var(--rosa);
+    color: var(--branco);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    background-color: var(--rosa); /* Rosa mais claro ao passar o mouse */
+    background-color: #e6b5bd;
 }
 
-/* Estilização das seções About e Contato */
-.about-section, .contact-section {
-    padding: 50px 20px;
+.about-section, .problem-section, .practice-section, .comp-section, .contact-section {
+    padding: 20px 20px;
     text-align: center;
+    margin: 10px;
+}
+
+
+.contact-section, .about-section{
     background-color: var(--rosa);
+    margin: 25px;
+    width: 95%;
 }
 
-.about-section h2, .contact-section h2 {
-    color: #fff;
-    font-size: 2.3rem;
-    margin-bottom: 20px;
+.comp-section{
+    margin: 25px;
+}
+
+.contact-section{
     text-align: center;
+    color: var(--branco);
 }
 
 .about-section-div{
-    padding: 10px;
-    color: #fff;
-    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.problem-section-div, .practice-section-div{
+    padding: 20px;
+    color: var(--branco);
+    background-color: var(--rosa);
+    margin-bottom: 20px;
+}
+
+.intro-section p, .intro-section h1{
+    text-align: center;
+}
+
+.contact-section p{
+    text-align: center;
+}
+
+.about-section h2, .about-section-div p{
+    color: var(--branco);
+    margin-top: 10px;
+}
+
+.problem-section p, .practice-section p, .practice-section h3{
+    margin: 15px;
+}
+
+.problem-section-div p, .practice-section-div p, .practice-section-div h3, .practice-section-div a{
+    margin: 0px;
+}
+
+.info-box h3, .info-box p{
+    text-align: center;
+}
+
+
+.contact-section a {
+    color: #e91e63;
+    text-decoration: none;
 }
 
 .about-section-image {
-    max-width: 60%; /* Ajusta a largura da imagem para não ultrapassar a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço em branco abaixo da imagem */
-    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona margem */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o número de colunas com base na largura da tela */
-    gap: 20px; /* Espaçamento entre os quadrados */
-    justify-content: center; /* Centraliza o grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
 .info-box {
-    background-color: #f9f9f9; /* Cor de fundo dos quadrados */
-    border: 1px solid #ddd; /* Borda dos quadrados */
-    border-radius: 8px; /* Cantos arredondados */
-    padding: 20px; /* Padding interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.info-box h3 {
-    margin-top: 0; /* Remove a margem superior do título */
-    font-size: 1.5em; 
-    text-align: center;
-}
 
-.info-box p {
-    font-size: 1em; /* Tamanho do texto do parágrafo */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    text-align: center;
-}
-
-.contact-section a {
-    color: #e91e63; /* Cor do link em rosa */
-    text-decoration: none;
-}
-
-/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1.0rem;
+    }
+    .info-box p {
+        font-size: 0.9rem;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .menu-toggle {
         display: flex;
     }
-
     .btn {
-        flex: 1 1 100%; /* Os botões ocuparão a largura total em telas pequenas */
-        text-align: center; /* Alinha o texto no centro dos botões */
+        flex: 1 1 100%;
+        text-align: center;
     }
-
-    .intro-section h1{
-        font-size: 1.8rem;
-    }
-    
-    .intro-section p {
-        font-size: 1em; /* Reduz o tamanho da fonte do parágrafo */
-    }
-    
-    .about-section-div p{
-        font-size: 1rem;
-    }
-
-    .about-section-image{
+    .about-section-image {
         max-width: 100%;
     }
-
     .button-container {
-        flex-direction: column; /* Alinha os botões verticalmente em telas menores */
-        gap: 5px; /* Reduz o espaçamento entre os botões */
+        flex-direction: column;
+        gap: 5px;
     }
-
     .info-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta o tamanho mínimo dos quadrados */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    .info-box h3 {
-        font-size: 1.2em; /* Reduz o tamanho da fonte dos títulos dos quadrados */
+    .about-section, .problem-section, .practice-section, .comp-section, .contact-section {
+   
+        margin: 0px;
     }
 
-    .info-box p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte dos parágrafos */
+    .problem-section p{
+        margin-bottom: 5px;
     }
-
     
 }

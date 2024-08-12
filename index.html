@@ -21,9 +21,10 @@
             </p>
             <div class="button-container">
                 <a href="#infos" class="btn">Informações</a>
-                <a href="#problema" class="btn">Problemas</a>
+                <a href="#problem" class="btn">Problemas</a>
+                <a href="#prac" class="btn">Treinamento</a>
                 <a href="#comp" class="btn">Competições</a>
-                <a href="#contato" class="btn">Contato</a>
+                <a href="#contact" class="btn">Contato</a>
             </div>
         </section>
 
@@ -33,7 +34,7 @@
                 <p>
                     As maratonas de programação são competições similares às olimpíadas científicas: 
                     dado uma prova e um tempo determinado, os competidores lutam para fazer o maior número
-                    de questões possíveis. Mas, ao contrário das olimpíadas, as maratonas de programação são
+                    de questões possíveis. Mas, ao contrário das olimpíadas, as maratonas são
                     um pouquinho mais práticas: a dificuldade está em, além de solucionar os problemas, programar
                     as soluções corretamente!
                 </p>
@@ -72,20 +73,106 @@
             A foto abaixo mostra eu e algumas amigas que eu fiz durante essa jornada, em uma maratona feminina em campinas.
             </p>
             <img src="girls.jpg" class="about-section-image">
+            <p> Talvez, depois de ler essas informações, você esteja pensando que é necessário muito conhecimento técnico para começar a competir... mas eu vou te mostrar que não! Todas nós
+                começamos de algum lugar, e existem problemas para todos os níveis de conhecimento. Nas próximas seções vou te apresentar um probleminha simples que você com certeza conseguiria resolver. 
         </div>
         </section>
 
-        <section id="Problemas">
-            <h1> </h1>
+        <section id="problem" class="problem-section">
+            <h2>Problema da melancia</h2>
+            <p> O problema da melancia é um problema iniciante clássico, que funciona da seguinte maneira:</p>
+            <div class="problem-section-div">
+                <h3> Problema: </h3>
+                <p> Pense que você está em um dia
+                    ensolarado e deseja dividir uma melancia com uma amiga para se refrescar. Entretanto, vocês não querem ser egoístas,
+                    por isso precisam dividir a melancia exatamente no meio, para que cada uma coma a mesma quantidade. Além disso, por algum motivo vocês querem 
+                    partir a melancia em pedaços com tamanhos inteiros, ou seja, não é possível que cada uma fique com um pedaço de 10.5 cm de tamanho, por exemplo, uma vez que isso
+                    é um número fracionado.
+                </p>
+            </div>
+            <a></a>
+            <div class="problem-section-div">
+                <h3> Tarefa: </h3>
+                <p> Sua tarefa é, dado um número "n" que representa o tamanho de melancia, decidir se você consegue dividi-la em dois pedaços que respeitem as condições dadas. </p>
+            </div>
+
+            <p> A maior parte das questões de programação competitiva tem a estrutura acima. Primeiro, há uma contextualização, uma "historinha" que envolve o problema que você vai resolver. 
+                Depois, eles te dão sua tarefa de fato. Nesse caso, a questão te dará vários tamanhos de melancia, e a gente precisa decidir se conseguimos dividir a melancia dada respeitando as condições do problema.
+            </p>
+            <p>
+                Se você pensar um pouquinho, vai perceber que se o problema te der uma melancia de tamanho ímpar, é impossível partir em dois pedaços iguais e inteiros. Mas, se o problema
+                te der uma melancia de tamanho par maior ou igual a dois, nós sempre conseguimos dividir respeitando as condições dadas. 
+            </p>
+            <p> Agora que nós sabemos como resolver o problema, nós precisamos escrever um programa que execute nossa solução! E isso é bem simples: o programa vai receber um tamanho de melancia "n"
+                e vai retornar se esse tamanho respeita as propriedades que a gente quer, ou não. Nosso código ficaria mais ou menos assim:
+
+            <div class="problem-section-div">
+                <h3> Solução: </h3>
+                <p> Se n>=2 e n for par: retorne "consigo partir a melancia".
+                </p>
+                <p> Caso contrário retorne "não consigo partir a melancia"
+                </p>
+            </div>
+        </section>
+
+        <section id="prac" class="practice-section">
+        <h2> Como treinar? </h2>
+
+        <p> Se você se interessou pelo tema e gostaria de começar a praticar, vou te dar algumas dicas. No final
+            vou deixar alguns links de sites úteis nesse início.
+    
+        <h3> 1- Escollha uma lingugagem </h3>
+            <p>
+                Para começar a treinar, é preciso primeiro escolher uma linguagem de programação. As mais comuns
+                nas competições são C, C++, Java e Python. Se você ja sabe alguma dessas, ótimo! Se não, eu te recomendo escolher uma
+                para aprender. A que eu mais gosto de usar, e a que eu te recomendaria, é C++.
+            </p>
+
+
+        <h3> 2- Treine problemas clássicos </h3>
+            <p> 
+                Após ter aprendido o básico de uma lingugagem de programação, você já está apta a treinar
+                alguns probleminhas comuns. Existem diversos temas básicos para começar que estarão disponíveis nos
+                links no final.
+            </p>
+
+        <h3> 3- Simule provas antigas </h3>
+
+            <p> 
+                Por fim, para treinar velocidade e se acostumar com o estilo de prova, nada melhor do que simular provas antigas.
+            </p>
+
+        <div class="practice-section-div">
+            <h3>Links úteis: </h3>
+            <p> Se você quer aprender a programar do zero: </p>
+            <a href="https://neps.academy/br/courses">Neps Academy</a>
+            <p> Se você quer aprender temas novos e fazer problemas clássicos: </p>
+            <a href="www.beecrowd.com.br">Beecrowd</a>
+            <p> Se você quer simular provas antigas: </p>
+            <a href="https://codeforces.com"> Codeforces </a>
+
+        </div>
+        </section>
+        
+        <section id="comp" class="comp-section">
+            <h2> Competições </h2>
+            <p> Existem muitas competições de programação, a maioria focada em um público universitário. Mas
+                duas competições muito famosas que podem ser realizadas por estudantes do ensino médio são a 
+                <a href="https://olimpiada.ic.unicamp.br/"> OBI</a> (Olimpíada Brasileira
+                de Informática) e a <a href="https://www.instagram.com/mfp.sbc/"> MFP</a>
+                (Maratona Feminina de Programação).
+            </p>
 
         </section>
 
-        <section id="contato" class="contact-section">
+        <section id="contact" class="contact-section">
             <h2>Contato</h2>
-            <p>Entre em contato através do e-mail: <a href="mailto:exemplo@email.com">exemplo@email.com</a></p>
+            <div class="contact-section-div">
+                <p> Gostou desse universo? Tem alguma dúvida? Pode me chamar no email!
+                <p/>
+                <a href="mailto:lailamvl@email.com">lailamvl@gmail.com</a>
+            </div>
         </section>
-
-        <script src="script.js"></script> <!-- Caminho para o JS -->
     </main>
 </body>
 </html>
