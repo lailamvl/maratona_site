@@ -235,7 +235,16 @@ nav {
     }
 
     .problem-section p{
+        margin-bottom: 15px;
+    }
+
+    .problem-section-div{
+        margin-top: 5px;
+    }
+
+    .practice-section-div p{
         margin-bottom: 5px;
+        margin-top: 5px;
     }
     
 }
